@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- ======== REMIXICON ======== -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- ======== CSS ======== -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- ======== Favicon ======== -->
+    <link type="image/png" sizes="32x32" rel="icon" href="assets/img/favicon.png">
+
+    <title>Coockie Clicker</title>
+</head>
+<body>
+
+    <main>
+        <section id="section1">
+            <div class="game__container">
+                <h1 class="title">COOKIE CLICKER</h1>
+
+                <div class="game__state__container">
+                    <div class="stat__group">
+                        <div class="stat__item count__clicks">
+                            <span class="stat__label">
+                                <i class="ri-mouse-line"></i>
+                                CLICKS:
+                            </span>
+                            <span class="stat-vlue" id="countClicks">0</span>
+                        </div>
+
+                        <div class="stat__item main__score">
+                            <span class="stat__label">
+                                <i class="ri-shining-2-line score-icon"></i>
+                                SCORE:
+                            </span>
+                            <span class="stat-vlue" id="mainScore">0</span>
+                        </div>
+
+                        <div class="stat__item cookie__coins">
+                            <span class="stat__label">
+                                <i class="ri-coin-line cookie-coins-icon"></i>
+                                COINS:
+                            </span>
+                            <span class="stat-vlue" id="cookieCoins">0</span>
+                        </div>
+
+                        <div class="stat__item cookie__gems">
+                            <span class="stat__label">
+                                <i class="ri-vip-diamond-line cookie-gems-icon"></i>
+                                GEMS:
+                            </span>
+                            <span class="stat-vlue" id="cookieGems">0</span>
+                        </div>
+                    </div>
+
+                    <div class="stat__item level__data">
+                        <span class="stat__label">
+                            <i class="ri-star-line level__icon"></i>
+                            LEVEL:
+                        </span>
+                        <span class="stat-vlue" id="levelRange">0</span>
+                        <span class="stat-name" id="levelName">NOOB</span>
+                    </div>
+
+                    <div class="level__progress_bar" id="levelProgressBar">
+                        <div class="level__progress">
+                            <span id="levelScore">0</span>
+                            <span>/</span>
+                            <span id="needed__points">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="count__temp-score" id="tempScore">0</div>
+
+                <div class="cookie__container">
+                    <img class="cookie__img" id="cookie" src="assets/img/cookie.png" alt="">
+                    <img class="cookie__particles" src="assets/img/cookie__particles.png" alt="">
+                    <img class="hevan__light" src="assets/img/heavenlight.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <menu class="menu" id="menu">
+            <div class="game__container">
+                <div class="menu__container"> <!-- show-menu -->
+
+                    <!--======== SECTION 2 ========-->
+                    <section class="shop__section" id="#section2">
+                        <h1 class="menu__title title">Shop</h1>
+
+                        <nav class="shop-nav">
+                            <ul class="shop-nav__sections">
+                                <li class="shop-nav__section">
+                                    <a href="#shop-section1" class="shop-nav__section-link">
+                                        <i class="ri-arrow-up-circle-line"></i>
+                                        Upgrades
+                                    </a>
+                                </li>
+        
+                                <li class="shop-nav__section">
+                                    <a href="#shop-section2" class="shop-nav__section-link">
+                                        <i class="ri-building-3-line"></i>
+                                        Factories
+                                    </a>
+                                </li>
+
+                                <li class="shop-nav__section">
+                                    <a href="#shop-section3" class="shop-nav__section-link">
+                                        <i class="ri-flashlight-line"></i>
+                                        Boosts
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+
+                        <div class="menu__list__container">
+                            <div class="menu__list">
+                                <!-- <div class="menu__item-availability">0</div> -->
+
+                                <div class="menu__item menu__item--upgrade">
+                                    <div class="upgrade__content">
+                                        <div class="upgrade__image-container">
+                                            <img src="assets/img/menu/upgrades/click_upgrade.png" alt="" class="upgrade__image">
+                                        </div>
+
+                                        <div class="upgrade__description">
+                                            <h3 class="upgrade__title">Cookie Clicks</h3>
+                                            <p class="upgrade__details">upgrade clicks points</p>
+                                            <div class="upgrade__benefit">
+                                                <span class="benefit__previous">0</span>
+                                                <i class="ri-arrow-right-double-line"></i>
+                                                <span class="benefit__next">+2</span>
+                                            </div>
+
+                                            <div class="upgrade__level">
+                                                lvl <span id="upgrade-level">0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr class="menu__item-hr">
+                                    
+                                    <div class="upgrade__actions">
+                                        <div class="upgrade__level">
+                                            lvl <span id="upgrade-level">0</span>
+                                        </div>
+                    
+                                        <button class="upgrade__button btn">
+                                            <span id="upgrade-cost">250</span>
+                                            <i class="ri-coin-line cookie-coins-icon"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="menu__item menu__item--upgrade">
+                                    <div class="upgrade__content">
+                                        <div class="upgrade__image-container">
+                                            <img src="assets/img/menu/upgrades/click_upgrade.png" alt="" class="upgrade__image">
+                                        </div>
+
+                                        <div class="upgrade__description">
+                                            <h3 class="upgrade__title">Cookie Clicks</h3>
+                                            <p class="upgrade__details">upgrade clicks points</p>
+                                            <div class="upgrade__benefit">
+                                                <span class="benefit__previous">0</span>
+                                                <i class="ri-arrow-right-double-line"></i>
+                                                <span class="benefit__next">+2</span>
+                                            </div>
+
+                                            <div class="upgrade__level">
+                                                lvl <span id="upgrade-level">0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr class="menu__item-hr">
+                                    
+                                    <div class="upgrade__actions">
+                                        <div class="upgrade__level">
+                                            lvl <span id="upgrade-level">0</span>
+                                        </div>
+                    
+                                        <button class="upgrade__button btn">
+                                            <span id="upgrade-cost">250</span>
+                                            <i class="ri-coin-line cookie-coins-icon"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="menu__item menu__item--upgrade">
+                                    <div class="upgrade__content">
+                                        <div class="upgrade__image-container">
+                                            <img src="assets/img/menu/upgrades/click_upgrade.png" alt="" class="upgrade__image">
+                                        </div>
+
+                                        <div class="upgrade__description">
+                                            <h3 class="upgrade__title">Cookie Clicks</h3>
+                                            <p class="upgrade__details">upgrade clicks points</p>
+                                            <div class="upgrade__benefit">
+                                                <span class="benefit__previous">0</span>
+                                                <i class="ri-arrow-right-double-line"></i>
+                                                <span class="benefit__next">+2</span>
+                                            </div>
+
+                                            <div class="upgrade__level">
+                                                lvl <span id="upgrade-level">0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr class="menu__item-hr">
+                                    
+                                    <div class="upgrade__actions">
+                                        <div class="upgrade__level">
+                                            lvl <span id="upgrade-level">0</span>
+                                        </div>
+                    
+                                        <button class="upgrade__button btn">
+                                            <span id="upgrade-cost">250</span>
+                                            <i class="ri-coin-line cookie-coins-icon"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+                                <!-- <div class="menu__item menu__item--upgrade">
+                                    <div class="upgrade__content">
+                                        <div class="upgrade__image-container">
+                                            <img src="assets/img/menu/upgrades/click_upgrade.png" alt="" class="upgrade__image">
+                                        </div>
+
+                                        <div class="upgrade__description">
+                                            <h3 class="upgrade__title">Cookie Clicks</h3>
+                                            <p class="upgrade__details">upgrade clicks points</p>
+                                            <p class="upgrade__benefit">
+                                                <span class="benefit__previous">0</span>
+                                                <i class="ri-arrow-right-double-line"></i>
+                                                <span class="benefit__next">+2</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <hr class="menu__item-hr">
+                                    
+                                    <div class="upgrade__actions">
+                                        <div class="upgrade__level">
+                                            lvl <span id="upgrade-level">0</span>
+                                        </div>
+                    
+                                        <button class="upgrade__button btn">
+                                            <span id="upgrade-cost">250</span>
+                                            <i class="ri-coin-line"></i>
+                                        </button>
+                                    </div>
+                                </div> -->
+
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <!--======== SECTION 3 ========-->
+                    <!-- <section id="#section3"></section> -->
+
+                    <!--======== SECTION 4 ========-->
+                    <!-- <section id="#section4"></section> -->
+
+                    <!--======== SECTION 5 ========-->
+                    <!-- <section id="#section5"></section> -->
+
+                </div>
+            </div>
+        </menu>
+    </main>
+
+
+    <nav class="nav">
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item" id="cookie-link">
+                    <a href="#section1" class="nav__link">
+                        <i class="ri-circle-fill nav__icon"></i>
+                        <span class="nav__name">cookie</span>
+                    </a>
+                </li>
+
+                <li class="nav__item" id="shop-link">
+                    <a href="#section2" class="nav__link">
+                        <i class="ri-store-3-fill nav__icon"></i>
+                        <span class="nav__name">shop</span>
+                    </a>
+                </li>
+
+                <li class="nav__item" id="exchange-link">
+                    <a href="#section3" class="nav__link">
+                        <i class="ri-exchange-fill nav__icon"></i>
+                        <span class="nav__name">exchange</span>
+                    </a>
+                </li>
+
+                <li class="nav__item" id="buildings-link">
+                    <a href="#section4" class="nav__link">
+                        <i class="ri-building-2-fill nav__icon"></i>
+                        <span class="nav__name">buildings</span>
+                    </a>
+                </li>
+
+                <li class="nav__item" id="errand-link">
+                    <a href="#section5" class="nav__link">
+                        <i class="ri-calendar-todo-fill nav__icon"></i>
+                        <span class="nav__name">errand</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ======== JS ======== -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
